@@ -1,0 +1,8 @@
+{% if question %}
+<p> This Question : <strong>  {{ question }} </strong></p>
+<ul>
+{% for vote in question.choice_set.all %}
+    <li> {{ vote.choice_text }} vote number <strong> {{ vote.votes }} </strong> </li>
+{% endfor %}
+</ul>
+{% endif %}
